@@ -133,7 +133,7 @@ class ImageAPI(CSEndpoint):
         self._check('repository', repository, str)
         self._check('image', image, str)
         self._check('tag', tag, str)
-        return self._api.get(f'{self._path}/{repository}/{image}/{tag}').json()
+        return self._api.get(f'images/{repository}/{image}/{tag}').json()
 
     def delete(
             self,
